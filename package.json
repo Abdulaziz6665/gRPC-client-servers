@@ -1,0 +1,26 @@
+{
+  "name": "grpc-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server1": "nodemon index.js",
+    "server2": "cd server-author && nodemon server.js",
+    "server3": "cd server-book && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server1\" \"npm run server2\" \"npm run server3\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.9",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "grpc": "^1.24.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
