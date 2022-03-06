@@ -26,7 +26,7 @@ function Get(_, callback) {
 function start() {
   const server = new grpc.Server();
   server.addService(authorProto.ManageAuthors.service, {Get:Get});
-  server.bindAsync('0.0.0.0:40000', grpc.ServerCredentials.createInsecure(), () => {
+  server.bindAsync('0.0.0.0:4000', grpc.ServerCredentials.createInsecure(), () => {
     console.log('server running on 4000')
     server.start()
   });

@@ -15,7 +15,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 const authorProto = grpc.loadPackageDefinition(packageDefinition).authors;
 
 
-const PORT = '0.0.0.0:40000'
+const PORT = '0.0.0.0:4000'
 
 const authorClient = new authorProto.ManageAuthors(PORT, grpc.credentials.createInsecure());
 
