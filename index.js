@@ -1,8 +1,8 @@
 const express =require('express')
 const {renderFile} = require('ejs')
 
-const authorClient = require('./clients/author')
-const bookClient = require('./clients/book')
+const authorClient = require('./clients/author/author')
+const bookClient = require('./clients/book/book')
 
 const app = express()
 

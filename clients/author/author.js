@@ -1,8 +1,7 @@
 const grpc = require('grpc');
 const protoLoader = require('@grpc/proto-loader');
-const path = require('path')
 
-const PROTO_PATH = path.join(__dirname, '../protos/author.proto');
+const PROTO_PATH = __dirname + '/author.proto';
 
 const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
   keepCase: true,
