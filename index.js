@@ -30,12 +30,4 @@ app.get('/book', (req, res) => {
   })
 })
 
-app.get('/all', (req, res) => {
-  authorClient.Get(null, (err, data) => {
-    if (err) throw new Error
-    console.log(data)
-  })
-})
-
-
 app.listen(3000, () => console.log(3000))
